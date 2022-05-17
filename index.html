@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="watch.js"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    .watchbox {
+      /* background-color: rgb(233, 231, 231); */
+      height: 40vw;
+      width: 40vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .watchbody {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      background-image: url(vs2.jpg);
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      outline: 1vw solid rgb(61, 61, 61);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .watchbody::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      border-radius: 50%;
+      z-index: 2;
+      opacity: 0.6;
+      height: 100%;
+      width: 100%;
+    }
+    .clocknum {
+      position: absolute;
+      z-index: 10;
+      height: 90%;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dot {
+      display: flex;
+      left: 48.8%;
+      position: absolute;
+      height: 1vw;
+      width: 1vw;
+      border-radius: 50%;
+      background-color: rgb(202, 202, 202);
+      z-index: 11;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+    .dot2 {
+      display: flex;
+      position: absolute;
+      height: 0.5vw;
+      width: 0.5vw;
+      border-radius: 50%;
+      background-color: rgb(240, 15, 15);
+      z-index: 11;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+    .clocksui {
+      position: absolute;
+      z-index: 10;
+      height: 36%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 0.2vw;
+      background-color: red;
+      bottom: 50%;
+      left: 50%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      transform-origin: bottom;
+    }
+    .vaddisui {
+      position: absolute;
+      z-index: 9;
+      height: 35%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 0.3vw;
+      background-color: white;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+    .shotisui {
+      position: absolute;
+      z-index: 9;
+      height: 27%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 0.4vw;
+      background-color: white;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+    .date {
+      position: absolute;
+      color: white;
+      bottom: 6vw;
+      font-size: 1.6vw;
+      background-color: transparent;
+      border-radius: 0.1vw;
+      padding: 0.3vw;
+      z-index: 9;
+      opacity: 0.8;
+    }
+
+    @media screen and (max-width: 900px) {
+      .watchbox {
+        width: 90vw;
+        height: 90vw;
+      }
+      .dot {
+        height: 1vh;
+        width: 1vh;
+      }
+      .dot2 {
+        height: 0.5vh;
+        width: 0.5vh;
+      }
+      .clocksui {
+        width: 0.2vh;
+      }
+      .vaddisui {
+        width: 0.3vh;
+      }
+      .shotisui {
+        width: 0.4vh;
+      }
+      .date {
+        bottom: 6vh;
+        font-size: 1.6vh;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="watchbox">
+        <div class="watchbody">
+          <embed class="clocknum" src="clock2.svg" type="" />
+          <div class="dot"><div id="dot2" class="dot2"></div></div>
+          <div id="datee" class="date">16/09/2022</div>
+          <div id="clocksui" class="clocksui"></div>
+          <div id="vaddisui" class="vaddisui"></div>
+          <div id="shotisui" class="shotisui"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script></script>
+</html>
