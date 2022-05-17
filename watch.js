@@ -13,8 +13,8 @@ setInterval(clock, 1000)
         hour = d.getHours();
         minute = d.getMinutes();
         seconds = d.getSeconds();
-        day = d.getDay();
-        month = d.getMonth();
+        day = d.getDate();
+        month = d.getMonth() + 1;
         year = d.getFullYear();
 
         clocksui = 6*seconds;
